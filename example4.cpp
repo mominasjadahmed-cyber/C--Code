@@ -1,58 +1,71 @@
 /*
-create a class shapes
-Define fucntions to calcualte area of
-1: circle
-2: sqaure
-3: rectangle
-4: triangle
-5: hexagon
-
-use fucntion overloading
+Write a class College containing data members as College_Id, College_Name, Establishment_year, University_name,
+Write following member functions
+Accept details of n colleges
+Display College Details of specific university
+Display College Details according to specified establishment year
 */
-#include <iostream>
+
+#include<iostream>
 using namespace std;
 
-class shapes
+class College
 {
+    int college_id;
+    string college_name;
+    int establishment_year;
+    string university_name;
+
     public:
-    void area(float r)
+
+    void details(int n)
     {
-        cout <<"Area of the circle is : "<<3.14*r*r<<endl;
+        cout<<"Enter details of "<<n<<" colleges: "<<endl;
+        for(int i=0;i<n;i++)
+        {
+            cout<<"Enter College Id: ";
+            cin>>college_id;
+            cout<<"Enter College Name: ";
+            cin>>college_name;
+            cout<<"Enter Establishment Year: ";
+            cin>>establishment_year;
+            cout<<"Enter University Name: ";
+            cin>>university_name;
+        }
+        cout<<endl;
     }
 
-    void area(int a)
+    void display(string university,College c[],int n)
     {
-        cout <<"Area of the square is : "<<a*a<<endl;
+        cout<<"College Details of University: "<<university<<endl;
+        for(int i=0;i<n;i++)
+        {
+            if(university_name == university)
+            {
+                cout<<" : "<<college_id<<" : "<<college_name<< " : "<<establishment_year<<" : "<<university_name<<endl;
+            }
+            cout<<endl;
+        }
     }
 
-    void area(int l,int b)
+    void display(int year)
     {
-        cout <<"Area of the rectangle is : "<<l*b<<endl;
-    }
-    void area(float b,float h)
-    {
-        cout <<"Area of the triangle is: "<<0.5*b*h<<endl;
+        cout<<"College Details established in Year: "<<year<<endl;
+        
+        if(establishment_year == year)
+        {
+            cout<<"College Id: "<<college_id<<endl;
+            cout<<"College Name: "<<college_name<<endl;
+            cout<<"Establishment Year: "<<establishment_year<<endl;
+            cout<<"University Name: "<<university_name<<endl;
+        }
+        cout<<endl;
     }
 
-    void area(double a)
-    {
-        cout <<"Area of the hexagon is : "<<(3*1.732*a*a)/2<<endl;
-    }
 
-    void display()
-    {
-        cout<<"Function Overloading Example"<<endl;
-        area(5.0);   //circle
-        area(4);   //square
-        area(4,6); //rectangle
-        area(5.5f,6.5f); //triangle
-        area(3);  //hexagon
-
-    }
 };
 int main()
 {
-    shapes s1;
-    s1.display();
+
     return 0;
 }
