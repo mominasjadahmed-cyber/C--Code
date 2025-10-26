@@ -66,6 +66,26 @@ class College
 };
 int main()
 {
+    int n,year;
+    string university;
+    cout<<"Enter number of colleges: ";
+    cin>>n;
+    College c[n];
+
+    c[0].details(n);
+    cout<<"Enter University Name to display details: ";
+    cin>>university;
+    for (int i=0;i<n;i++)
+    {
+        c[i].display(university,c,n);
+    }
+    cout<<"Enter Establishment Year to display details: ";
+    cin>>year;
+    for (int i=0;i<n;i++)
+    {
+        c[i].display(year);
+    }
+
 
     return 0;
 }
