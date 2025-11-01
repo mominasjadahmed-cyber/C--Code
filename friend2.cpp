@@ -25,8 +25,9 @@ class Number
 {
     int q;
     protected:
-    string p;
     int f;
+    string p;
+    
 
     public:
     string name;
@@ -42,8 +43,8 @@ class Number
     void display()
     {
         cout<<"q: "<<q<<endl;
-        cout<<"p: "<<p<<endl;
         cout<<"f: "<<f<<endl;
+        cout<<"p: "<<p<<endl;
         cout<<"name: "<<name<<endl;
     }
 
@@ -58,8 +59,8 @@ void show(Data T,Number E)
     cout<<"w: "<<T.w<<endl;
     cout<<"x: "<<T.x<<endl;
     cout<<"q: "<<E.q<<endl;
-    cout<<"p: "<<E.p<<endl;
     cout<<"f: "<<E.f<<endl;
+    cout<<"p: "<<E.p<<endl;
     cout<<"name: "<<E.name<<endl;
 
 }
