@@ -21,16 +21,16 @@ class Box
     {
         cout<<endl<<l*w*d;
     }
-    friend Box operator ++(Box &B);
+    friend Box operator ++(Box &B,int);
 
 };
-Box operator ++(Box &B)
+Box operator ++(Box &B,int)
 {
 
     Box Answer;
-    Answer.l=++B.l;
-    Answer.w=++B.w;
-    Answer.d=++B.d;
+    Answer.l=B.l++;
+    Answer.w=B.w++;
+    Answer.d=B.d++;
     return Answer;
 }
 
@@ -39,7 +39,7 @@ int main()
 {
     Box B1(4,3,2),B2(6,5,4),B3;
     B1.volume();
-    B3=++B1;
+    B3=B1++;
     B1.volume();
     B3.volume();
     
