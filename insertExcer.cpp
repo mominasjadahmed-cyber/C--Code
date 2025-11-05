@@ -24,8 +24,10 @@ class Complex
 
 istream& operator>>(istream &in,Complex &C)
 {
-    cout<<"Enter real and imaginary : ";
-    in>>C.real>>C.imag;
+    cout<<endl<<"Enter real : ";
+    in>>C.real;
+    cout<<"Enter imag : ";
+    in>>C.imag;
     return in;
 
 }
