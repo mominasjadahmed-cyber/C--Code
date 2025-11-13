@@ -72,7 +72,7 @@ class Prfoile:public Personal, public Education, public Skills
 };
 int main()
 {
-    Prfoile P1("MERN Stack Developer","React.js",4,"BE",8.5,"Aakif","Malegaon");
+    Prfoile P1("MERN ","React",4,"TE",9.5,"Asjad","Malegaon");
     P1.display();
     return 0;
 }
