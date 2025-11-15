@@ -9,7 +9,7 @@ class Store
     {
         this->store_name=store_name;
         this->url=url;
-        cout<<endl<<"Store Constructor Called";
+       
     }
     void displayStore()
     {
@@ -25,7 +25,7 @@ class Category:public Store
     {
         this->category_name=category_name;
         this->num_products=num_product;
-        cout<<endl<<"Category Constructor Called";
+        
         
     }
     void displayCategory()
@@ -58,7 +58,9 @@ int main()
     Product p1("Laptop", 75000, 5, "Electronics", 5, "TechStore", "www.techstore.com");
     
     p1.displayStore();
+    cout<<endl<<"Store Constructor Called";
     p1.displayCategory();
+    cout<<endl<<"Category Constructor Called";
     p1.displayProduct();
 
     return 0;
